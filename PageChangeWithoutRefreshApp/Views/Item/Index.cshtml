@@ -7,41 +7,9 @@
 <h1>Items Page</h1>
 
 <div id="container">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.MyProperty1)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.MyProperty2)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.MyProperty3)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.MyProperty1)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.MyProperty2)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.MyProperty3)
-                    </td>
-
-                </tr>
-            }
-        </tbody>
-    </table>
+     <partial name="FilteredItems" model="Model" />
 </div>
 
 <input type="button" onclick="GetFilteredItems()" value="Get Filtered Items" />
 
-<script type="text/javascript" src="~/js/Index.js"></script>
+<script type="text/javascript" src="~/js/Item/Index.js"></script>
